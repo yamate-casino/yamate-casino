@@ -7,21 +7,48 @@
 <body>
 <img src="Casino.jpg" style="width:100vw;">
 <h1 class="h1">YAMATE　CASINO</h1>
-<div class="poker"><img class="p"src="po.jpg"><span>ポーカー</span>
+<div class="poker">
+<img class="p"src="po.jpg">
+<span>ポーカー</span>
 <div class="but1" onclick="po()">説明を見る</div>
 </div>
-<div class="rulette"><img class="p"src="Casino.jpg"><span>ルーレット</span>
-<div class="but1" onclick="ru()">説明を見る</div>
+<div class="rulette">
+<img class="p"src="Casino.jpg">
+<span>ルーレット</span>
+<div onclick="ru()" class="but1">説明を見る</div>
 </div>
-<div class="black"><img class="p"src="black.jpg"><span>ブラックジャック</span>
+<div class="black">
+<img class="p"src="black.jpg">
+<span>ブラックジャック</span>
 <div class="but1" onclick="bl()">説明を見る</div>
 </div>
-<div class="slot"><img class="p"src="slot.jpg"><span>スロット</span>
-<div class="but1" onclick="start()">説明を見る</div>
+<div class="slot">
+<img class="p"src="slot.jpg">
+<span>スロット</span>
+<div class="but2" onclick="start()">ゲームをする</div>
 </div>
-<div class="darts"><img class="p"src="darts.jpg"><span>ダーツ</span>
+<div class="darts">
+<img class="p"src="darts.jpg">
+<span>ダーツ</span>
 <div class="but1" onclick="da()">説明を見る</div>
 </div>
+<script>
+function po(){
+location.href = "po.html"
+}
+function ru(){
+location.href = "ru.html";
+}
+function bl(){
+location.href = "bl.html"
+}
+function start(){
+location.href="start.html"
+}
+function da(){
+location.href = "da.html"
+}
+</script>
 <style>
 body{
 margin:0;
@@ -89,6 +116,23 @@ border-radius:10px;
 box-shadow: 0 0  5px gray;
 z-index:100;
 }
+.but2{
+
+position:relative;top:-15vw;
+width:200px;
+padding:5px;
+margin-bottom:0;
+margin-top:0;
+Margin-right:20vw;
+background-color:black;
+color:white;
+font-size:30px;
+font-family:monospace;
+text-align:center;
+border-radius:10px;
+box-shadow: 0 0  5px gray;
+z-index:100;
+}
 .p{
 width:50vw;
 margin:0;
@@ -104,22 +148,6 @@ font-weight:600;
 color:white;
 }
 </style>
-<script>
-function po(){
-location.href = "";
-}
-function ru(){
-location.href = "";
-}
-funcion bl(){
-location.href = "";
-}
-function start(){
-location.href = "start.html";
-}
-function da(){
-location.href = "";
-}
-</script>
+
 </body>
 </html>
