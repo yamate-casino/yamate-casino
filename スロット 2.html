@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>カジノ</title>
 </head>
-<body>
+<body onload="f()">
 <audio id="au">
 <source src="umi.mp3" type="auido/mp3">
 </audio>
@@ -734,9 +734,9 @@
 <script src="jquery.js"></script>
 <script>
       //210
-      time1= 500;
-      time2 = 500;
-      time3 = 500;
+      time1= 5000;
+      time2 = 5000;
+      time3 = 5000;
       timee = 1;
       a = 5;
       top1 = '-32vw';
@@ -764,9 +764,40 @@ d10.addEventListener('click',dd10);
 dd.addEventListener('click',ddd);
 upp.addEventListener('click',up);
 downn.addEventListener('click',down);
+function f(){
+cookie = document.cookie;
+alert(cookie);
+n = cookie.indexOf("name=");
+p = cookie.indexOf("; pass=");
+t = cookie.indexOf("; tip=");
+a = cookie.indexOf("; num=");
+n2 = cookie.substring(n+5,a);
+p2 = cookie.substring(p+7,t);
+t2 = cookie.substring(t+6,);
+a2 = cookie.substring(a+6,p);
+document.getElementById("credit").innerHTML = "$"+t2;
+}
 
 function save(){
-location.href = "save.html";
+alert(crem);
+alert(a2);
+crem = String(crem);
+a2 = String(a2);
+url="https://script.google.com/macros/s/AKfycbzTWhb59EChVtXXu3VcpsXUUinB76DCHxh_4kRZ1KMM6JYEWGdnH1mIKBsDdwWImd8AWg/exec";
+         var data = [{
+            'name3':crem,
+            'name4':a2,
+            'name5':'c'
+         }];
+         var params = {
+            "method":"post",
+            "mode":"no-cors",
+            "Content-Type":"application/json",
+            "body":JSON.stringify(data)
+       }
+       alert(JSON.stringify(data));
+         fetch(url,params)
+//location.href = "save.html";
 }
 function dd1(){
   timee++;
@@ -1295,8 +1326,11 @@ i = 5;
     c = ".k"+prize2;
     prize2 = String(prize2)-1;
     betm2 = score[prize2];
-   document.querySelector(c).style.backgroundColor = "red";
+    alert(betm2);
+   document.querySelector(c).style.backgroundColor = "gold";
    document.getElementById("signn").innerHTML = "BIGBINGO";
+   puls();
+   return;
    }
    else if(prize1 == prize2){
     document.getElementById("signn").innerHTML = "BINGO";
@@ -1306,6 +1340,8 @@ i = 5;
     betm2 = score2[prize1];
     document.querySelector(c).style.backgroundColor = "gold";
             //document.querySelector(c).style.border = "solid";
+               puls();
+               return;
    }
    else if(prize1 == prize3){
     document.getElementById("signn").innerHTML = "BINGO";
@@ -1315,6 +1351,8 @@ i = 5;
     betm2 = score2[prize3];
     document.querySelector(c).style.backgroundColor = "gold";
             //document.querySelector(c).style.border = "solid";
+               puls();
+               return;
    }
    else if(prize2 == prize3){
     document.getElementById("signn").innerHTML = "BINGO";
@@ -1324,10 +1362,14 @@ i = 5;
     betm2 = score2[prize3];
     document.querySelector(c).style.backgroundColor = "gold";
         //document.querySelector(c).style.border = "solid";
+           puls();
+           return;
    }
     }
     prizecheck = 0;
 }
+}
+function puls(){
 if(betm2 == 0){
   betm = parseInt(betm);
   betm = 0;
