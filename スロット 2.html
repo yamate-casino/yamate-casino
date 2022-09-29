@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>カジノ</title>
+</head>
+<body>
+<audio id="au">
+<source src="umi.mp3" type="auido/mp3">
+</audio>
+<!--div id="check"class="check" onclick="check()"></div-->
+<!--一番外枠1-->
+<div class="all">
+<!--一番下のところ1-->
+<div class="big_under"></div>
+<!--下端部看板4-->
+<div class="under_4"></div>
+<div class="under_3"></div>
+<div class="under_2"></div>
+<div class="under_1"></div>
+<!--操作基盤11-->
+<div class="con_1"></div>
+<div class="con_2"></div>
+<div class="con_3"></div>
+<div class="con_4"></div>
+<div class="con_5"></div>
+<div class="con_6" onclick="button2()"></div>
+<div class="con_7" onclick="button3()"></div>
+<div class="con_8" onclick="button4()"></div>
+<div class="con_9" onclick="imgs()"></div>
+<div class="con_10"></div>
+<div class="con_11"></div>
+<!--スクリーン-->
+<div class="sc_1"></div>
+<div class="sc_2"></div>
+<div class="sc_3"></div>
+<div class="sc_4"></div>
+<!--回転部分-->
+<div class="roll_1"></div>
+<div class="roll_2"></div>
+<div class="roll_s"></div>
+<div class="roll_3"></div>
+<div class="roll">
+    <ul id="box">
+        <li id="pic"class="reel"><img class="piccon" src="2.jpg"></li>
+
+        <li id="pic1"class="reel"><img class="piccon" src="1.jpg"></li>
+        <li id="pic2"class="reel"><img class="piccon" src="7.jpg"></li>
+        <li id="pic3"class="reel"><img class="piccon" src="6.jpg"></li>
+        <li id="pic4"class="reel"><img class="piccon" src="5.jpg"></li>
+        <li id="pic5"class="reel"><img class="piccon" src="4.jpg"></li>
+        <li id="pic6"class="reel"><img class="piccon" src="3.jpg"></li>
+        <li id="pic7"class="reel"><img class="piccon" src="2.jpg"></li>
+        <li id="pic8"class="reel"><img class="piccon" src="1.jpg"></li>
+
+        <li id="pic"class="reel"><img class="piccon" src="0.jpg"></li>
+    </ul>
+    </div>
+<div class="roll_4"></div>
+    <div class="roll2">
+    <ul id="box2">
+        <li id="pic"class="reel"><img class="piccon" src="2.jpg"></li>
+        <li id="pic11"class="reel"><img class="piccon" src="1.jpg"></li>
+        <li id="pic22"class="reel"><img class="piccon" src="7.jpg"></li>
+        <li id="pic33"class="reel"><img class="piccon" src="6.jpg"></li>
+        <li id="pic44"class="reel"><img class="piccon" src="5.jpg"></li>
+        <li id="pic55"class="reel"><img class="piccon" src="4.jpg"></li>
+        <li id="pic66"class="reel"><img class="piccon" src="3.jpg"></li>
+        <li id="pic77"class="reel"><img class="piccon" src="2.jpg"></li>
+        <li id="pic88"class="reel"><img class="piccon" src="1.jpg"></li>
+        <li id="pic"class="reel"><img class="piccon" src="0.jpg"></li>
+      </ul>
+</div>
+
+<div class="roll_5"></div>
+    <div class="roll3">
+    <ul id="box3">
+        <li id="pic"class="reel"><img class="piccon" src="2.jpg"></li>
+        <li id="pic111"class="reel"><img class="piccon" src="1.jpg"></li>
+        <li id="pic222"class="reel"><img class="piccon" src="7.jpg"></li>
+        <li id="pic333"class="reel"><img class="piccon" src="6.jpg"></li>
+        <li id="pic444"class="reel"><img class="piccon" src="5.jpg"></li>
+        <li id="pic555"class="reel"><img class="piccon" src="4.jpg"></li>
+        <li id="pic666"class="reel"><img class="piccon" src="3.jpg"></li>
+        <li id="pic777"class="reel"><img class="piccon" src="2.jpg"></li>
+        <li id="pic888"class="reel"><img class="piccon" src="1.jpg"></li>
+        <li id="pic"class="reel"><img class="piccon" src="0.jpg"></li>
+      </ul>
+</div>
+
+<!--上端部-->
+<div class="top_1"></div>
+<div class="top_2"></div>
+<div class="top_3"></div>
+<!--しましま-->
+<div class="top_4"></div>
+<div class="top_4"></div>
+<div class="top_4"></div>
+<div class="top_4"></div>
+<div class="top_4"></div>
+<div class="top_4"></div>
+<div class="top_4"></div>
+<div class="top_5"></div>
+<div class="top_5"></div>
+<div class="top_5"></div>
+<div class="top_5"></div>
+<div class="top_5"></div>
+<div class="top_5"></div>
+<div class="top_5"></div>
+</div>
+<!--お金-->
+<div class="atarinfo">
+<div class="atari"></div>
+<div id="bett"class="bet">Bet<span class="bets"id ="bet">$0</span></div>
+<div onclick = "re()"class="re">reset</div>
+<div id="ana"class="ana">betしてください</div>
+<div id="creditt"class="credit">Credit<span id = "credit">$0</span></div>
+<div id="d1"class="bet1">$1</div>
+<div id="d5"class="bet2">$5</div>
+<div id="d10"class="bet3">$10</div>
+<div id="dd"class="bet4">$</div>
+<div id="up"class="up">+50</div>
+<div id="down"class="down">-50</div>
+</div>
+<!--あたり-->
+<div class="k"></div>
+<div class="section">
+<div ><img  id="k1"class="k1"src="11.PNG"></div>
+<div ><img  id="k2"class="k2" src="22.PNG"></div>
+<div ><img  id="k3"class="k3" src="33.PNG"></div>
+<div ><img  id="k4"class="k4" src="44.PNG"></div>
+<div ><img id="k5" class="k5" src="55.PNG"></div>
+<div ><img id="k6" class="k6" src="66.PNG"></div>
+<div ><img  id="k7"class="k7" src="77.PNG"></div>
+</div>
+<div class="section2">
+  <div ><img  id="k11"class="k11" src="111.PNG"></div>
+  <div ><img  id="k22"class="k22" src="222.PNG"></div>
+  <div ><img  id="k33"class="k33" src="333.PNG"></div>
+  <div ><img  id="k44"class="k44" src="444.PNG"></div>
+  <div ><img  id="k55"class="k55" src="555.PNG"></div>
+  <div ><img  id="k66"class="k66" src="666.PNG"></div>
+  <div ><img  id="k77"class="k77" src="777.PNG"></div>
+
+  </div>
+<!--目隠し-->
+<!--div class="maskt"></div-->
+<div class="maskb"></div>
+<div id="signn" class="sign">CASINO
+    <!--pre>YAMATE
+ <span>casino</span>
+    </pre--></div>
+    <div class="sign2">
+        <pre>YAMATE
+     <span>casino</span>
+   </pre></div-->
+   <div class="save" onclick="save()">やめる</div>
+<script>
+    function check(){
+        alert(document.getElementById('check').getBoundingClientRect().bottom);
+    }
+    //回転部分上部　160　下部　320 中部　
+
+</script>
+<style>
+    body{
+        font-family: 'Times New Roman', Times, serif;
+        padding:0;
+        margin:0;
+    }
+    li{
+        list-style-type: none;
+    }
+    .save{
+    Position:relative;top:15vw;left:-10vw;
+    Font-size:20px;
+    Font-family:monospace;
+    Font-weight:600;
+    Background-color:red;
+    Padding:10px;
+    Text-align:center;
+    Border-radius:10px;
+    Box-shadow: 0 0 5px gray;
+    }
+.k1{
+  background-color: ;
+}
+    .section{
+      width:200px;
+      height:200px;
+      background-color: ;
+      position: absolute;left:50vw;top: 30vw;
+      z-index:190;
+    }
+    .section2{
+      border-left:3px solid;
+      padding-left:70px;
+      padding: top 10px;
+      width:200px;
+      height:30vw;
+      background-color: ;
+      position: absolute;left: 72vw;top: 30.2vw;
+      z-index:190;
+    }
+    .section img{
+      margin-top:7px;
+      position: relative;top:-3.5vw;left:-4vw;
+      width:22vw;
+    }
+    .section2 img{
+      padding-left:10px;
+      margin-top:5px;
+      position: relative;top:-3.5vw;left:-4vw;
+      width:22vw;
+    }
+    .k{
+      position:absolute;left:45vw;top:25vw;
+      width:53vw;
+      height:40vw;
+      border:5px solid;
+      background-color: red;
+      z-index:190;
+    }
+    .up{
+     position:absolute;left:94vw;top:15vw;
+    width:40px;
+    height:30px;
+    background-color:black;
+    z-index:190;
+    color:white;
+    font-size:20px;
+    }
+    .down{
+    position:absolute;left:94vw;top:20vw;
+    width:40px;
+    height:30px;
+    background-color:black;
+    z-index:190;
+    color:white;
+     font-size:20px;
+    }
+    .atari{
+      position:absolute;left:45vw;
+      width:53vw;
+      height:25vw;
+      border:5px solid;
+      background-color:	#AF011C;
+      z-index:190;
+    }
+    .re{
+      width:100px;
+      text-align:center;
+      position:relative;top:20px;left:65vw;
+      border-radius:10px;
+      padding-left:5px;
+      padding-right:5px;
+      margin-left:20vw;
+      font-size:30px;
+      font-weight: 700;
+      background-color:darkred;
+      color:white;
+      z-index:200;
+    }
+    .ana{
+      position:absolute;top:11vw;left:60vw;
+      font-family: monospace;
+      font-size:30px;
+      font-weight:700;
+      padding-left: 5px;
+      padding-right: 5px;
+      z-index:200;
+      color:white;
+      background-color: ;
+      border-radius:20px;
+    }
+    .bet{
+      position:absolute;left:50vw;top:15px;
+      background-color:black;
+      width:45vw;
+      height:4vw;
+      border:2px solid;
+      color:white;
+      font-size:40px;
+      font-weight:600;
+      z-index:200;
+    }
+    .bets{
+      padding-left:30px;
+      z-index:200;
+    }
+    .bet1{
+      position:absolute;left:45vw;top:15vw;
+      margin-left:2vw;
+      width:10vw;
+      height:8vw;
+      background-color:black;
+      border:4px solid;
+      border-color:gold;
+      color:white;
+      padding-top:0vw;
+      font-size:60px;
+      text-align:center;
+      font-weight:600;
+      z-index:200;
+    }
+    .bet2{
+      position:absolute;left:55vw;top:15vw;
+      margin-left:4vw;
+      width:10vw;
+      height:8vw;
+      background-color:black;
+           border:4px solid;
+      border-color:gold;
+      color:white;
+      padding-top:0vw;
+      font-size:60px;
+      text-align:center;
+      font-weight:600;
+      z-index:200;
+    }
+    .bet3{
+      position:absolute;left:65vw;top:15vw;
+      margin-left:6vw;
+      width:10vw;
+      height:8vw;
+      background-color:black;
+           border:4px solid;
+      border-color:gold;
+      color:white;
+      padding-top:0vw;
+      font-size:60px;
+      text-align:center;
+      font-weight:600;
+      z-index:200;
+    }
+    .bet4{
+      position:absolute;left:75vw;top:15vw;
+      margin-left:8vw;
+      width:10vw;
+      height:8vw;
+      background-color:black;
+           border:4px solid;
+      border-color:gold;
+      color:white;
+      padding-top:0vw;
+      font-size:60px;
+      text-align:center;
+      font-weight:600;
+      z-index:200;
+    }
+    .credit{
+        position:absolute;left:50vw;top:75px;
+      background-color:black;
+           border:5px solid;
+      border-color:gold;
+      width:45vw;
+      height:4vw;
+      border:2px solid;
+      color:white;
+      font-size:40px;
+      font-weight:600;
+      z-index:200;
+    }
+    .credit span{
+      padding-left:30px;
+      z-index:200;
+    }
+    .check{
+        position:absolute;top:320px;
+        width:1000px;
+        height:50px;
+        background-color:black;
+        z-index:300;
+    }
+
+     .maskb{
+    position:relative;top:640px;
+    padding:0;
+    margin:0;
+    width:100vw;
+    height:400px;
+    background-color:white;
+    z-index:170;
+    }
+    .sign{
+        position:absolute;left: 150px;top:0;
+        font-size:20px;
+        font-weight:700;
+        z-index:300;
+    }
+    .sign pre{
+        margin:0;
+        padding:0;
+        font-size:40px;
+        font-weight:1000;
+        width:200px;
+        background-color:;
+        line-height: 20px;
+    }
+    .sign span{
+        margin:0;
+        padding:0;
+        line-height: 0em;
+        font-size:20px;
+        font-weight:1000;
+    }
+    .sign2{
+        position:absolute;left: 100px;top:530px;
+        z-index:300;
+    }
+    .sign2 pre{
+        margin:0;
+        padding:0;
+        font-size:80px;
+        font-weight:1000;
+        width:200px;
+        background-color:;
+        line-height: 20px;
+    }
+    .sign2 span{
+        margin:0;
+        padding:0;
+        line-height: 0em;
+        font-size:20px;
+        font-weight:1000;
+    }
+
+    .all{
+        position: absolute;top:65.2vw;
+    }
+    .big{
+        float:left;
+        width:370px;
+        height:120px;
+        margin-left:15px;
+        background-color: red;
+        border-radius:10px;
+        z-index:0;
+    }
+    .big_under{
+        border-bottom-left-radius:10px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 0;
+        position:relative;top:-60px;
+        background-color:black;
+        margin:0;
+        padding:0;
+        width:480px;
+        height:60px;
+        z-index:190;
+    }
+
+    .under_4{
+        position: relative;top:-336px;
+        width:480px;
+        height:216px;
+        background-color:gray;
+        z-index:180;
+    }
+    .under_3{
+        position: relative;top:-546px;
+        margin-left:10px;
+        width:456px;
+        height:198px;
+        background-color:darkgray;
+        box-shadow: 0 0  1px black;
+        z-index:180;
+    }
+    .under_2{
+        position: relative;top:-732px;
+        margin-left:20px;
+        width:432px;
+        height:174px;
+        background-color:darkred;
+        z-index:180;
+    }
+    .under_1{
+        text-align:center;
+        font-size:80px;
+        color:white;
+        font-weight:1000;
+        position: relative;top:-897.6px;
+        margin-left:30px;
+        width:408px;
+        height:156px;
+        background-color:red;
+        z-index:180;
+    }
+    .con_1{
+        position:relative;top:-1140px;
+        width:480px;
+        height:60px;
+        background-color: lightgrey;
+        z-index:180;
+    }
+    .con_2{
+        position:relative;top:-1206px;
+        width:480px;
+        height:60px;
+        border-radius:30px;
+        background-color: grey;
+        z-index:180;
+    }
+    .con_3{
+        position:relative;top:-1260px;
+        width:480px;
+        height:9.6px;
+        background-color: gray;
+        border-bottom:3px solid;
+        border-top:5px solid;
+        border-color:lightgray;
+        z-index:180;
+    }
+    .con_4{
+        position:relative;top:-1279.2px;left:96px;
+        width:300px;
+        height:66px;
+        background-color:lightgray;
+        border-radius:10px;
+        z-index:180;
+        box-shadow: 2px 7px 4px gray;
+    }
+    .con_5{
+        position:relative;top:-1332px;left:111.6px;
+        width:270px;
+        height:42px;
+        background-color:black;
+        border-radius:10px;
+        z-index:180;
+    }
+    .con_6{
+        position:relative;top:-1368px;left:144px;
+        width:30px;
+        height:30px;
+        background-color:red;
+        border-radius:50px;
+        z-index:180;
+        box-shadow: 0 0  10px white;
+    }
+    .con_7{
+        position:relative;top:-1398px;left:234px;
+        width:30px;
+        height:30px;
+        background-color:red;
+        border-radius:50px;
+        z-index:180;
+        box-shadow: 0 0  10px white;
+    }
+    .con_8{
+        position:relative;top:-1428px;left:324px;
+        width:30px;
+        height:30px;
+        background-color:red;
+        border-radius:50px;
+        z-index:180;
+        box-shadow: 0 0  10px white;
+    }
+    .con_9{
+        position:relative;top:-1470px;left:24px;
+        width:60px;
+        height:60px;
+        box-shadow: 2px 7px 4px gray;
+        background-color:black;
+        border-radius:50px;
+        z-index:180;
+    }
+    .con_10{
+        position:relative;top:-1524px;left:60px;
+        width:12px;
+        height:12px;
+        background-color:white;
+        border-radius:50px;
+        z-index:180;
+    }
+    .sc_1{
+        position:relative;top:-1854px;
+        width:420px;
+        height:234px;
+        clip-path: polygon(0% 100%, 4% 0%, 96% 0%, 100% 100%);
+        border:30px solid;
+        border-bottom:42px solid;
+        border-color:lightgray;
+        z-index:180;
+    }
+
+
+    .sc_2{
+        position:relative;top:-2148px;left:12px;
+        width:408px;
+        height:234px;
+        clip-path: polygon(0% 100%, 4% 0%, 96% 0%, 100% 100%);
+        border:24px solid;
+        border-bottom:36px solid;
+        border-color:gray;
+        z-index:180;
+    }
+    .sc_3{
+        position:relative;top:-2430px;left:18px;
+        width:384px;
+        height:216px;
+        clip-path: polygon(0% 100%, 4% 0%, 96% 0%, 100% 100%);
+        border:30px solid;
+        border-color:darkred;
+        z-index:180;
+     }
+    .sc_4{
+        position:relative;top:-2688px;left:24px;
+        width:372px;
+        height:192px;
+        clip-path: polygon(0% 100%, 4% 0%, 96% 0%, 100% 100%);
+        border:30px solid;
+        border-color:red;
+        z-index:180;
+    }
+    .roll_1{
+        position:relative;top:-2916px;left:48px;
+        width:336px;
+        height:156px;
+
+        border:24px solid;
+        border-color:darkred;
+        z-index:180;
+    }
+    .roll_2{
+        position:relative;top:-3102px;left:66px;
+        width:336px;
+        height:150px;
+
+        border:6px solid;
+        border-color:black;
+        z-index:180;
+    }
+    .piccon{
+        width:100px;
+        height: 70px;
+        position: relative;left:-100px;
+    }
+    .roll{
+        /*一番下まで下がったとき-32/一番上-59/65*/
+        position:absolute;top:-102.5vw;left:135px;
+        z-index:170;
+    }
+    .roll2{
+        position:absolute;top:-102.5vw;left:250px;
+        z-index:170;
+    }
+    .roll3{
+        position:absolute;top:-102.5vw;left:370px;
+        z-index:170;
+    }
+    .roll_3{
+        position:relative;top:-3258px;left:72px;
+        width:102px;
+        height:150px;
+        border-right:6px solid;
+        z-index:180;
+    }
+    .roll_4{
+        position:relative;top:-3408px;left:180px;
+        width:108px;
+        height:150px;
+        border-right:6px solid;
+        border-left:6px solid;
+        z-index:180;
+    }
+   .roll_5{
+    position:relative;top:-3558px;left:300px;
+        width:102px;
+        height:150px;
+        border-left:6px solid;
+        z-index:180;
+    }
+    .top_1{
+        position:relative;top:-3880px;
+        border-radius:5px;
+        margin-left:15px;
+        width:444px;
+        height:84px;
+        background-color:darkred;
+        z-index:170;
+    }
+    .top_2{
+        position:relative;top:-3960px;
+        border-radius:2px;
+        margin-left:35px;
+        width:396px;
+        height:72px;
+        background-color:gray;
+        z-index:180;
+    }
+    .top_3{
+        position:relative;top:-4032px;
+        border:4.8px solid;
+        border-color:lightgray;
+        margin-left:100px;
+        width:228px;
+        height:62.4px;
+        background-color:white;
+        z-index:190;
+        text-align:center;
+        color:red;
+        font-weight:900;
+        font-size:40px;
+
+    }
+    .top_4{
+        position:relative;top:-4099.2px;
+        border-bottom:2.4px solid;
+        margin-left:40px;
+        width:60px;
+        height:6px;
+        background-color:gray;
+        z-index:200;
+    }
+    .top_5{
+        position:relative;top:-4158px;
+        border-bottom:2.4px solid;
+        margin-left:366px;
+        width:60px;
+        height:6px;
+        background-color:gray;
+        z-index:200;
+    }
+    #box{
+        position:absolute;
+    }
+    #box2{
+        position:absolute;
+    }
+    #box3{
+        position:absolute;
+    }
+</style>
+<script src="jquery.js"></script>
+<script>
+      //210
+      time1= 500;
+      time2 = 500;
+      time3 = 500;
+      timee = 1;
+      a = 5;
+      top1 = '-32vw';
+      top2 = '22.9vw';
+      top3 = '22.9vw';
+      score = [300,200,100,50,25,15,10];
+      score2 = [50,40,30,20,10,5,3];
+      
+bett = document.getElementById("bett");
+credit = document.getElementById("creditt");
+bet = document.getElementById("bet");
+creditt = document.getElementById("credit");
+d1 = document.getElementById("d1");
+d5 = document.getElementById("d5");
+d10 = document.getElementById("d10");
+dd = document.getElementById("dd");
+upp = document.getElementById("up");
+downn = document.getElementById("down");
+betm = 0;
+crem = 100;
+betmm = 0;
+d1.addEventListener('click',dd1);
+d5.addEventListener('click',dd5);
+d10.addEventListener('click',dd10);
+dd.addEventListener('click',ddd);
+upp.addEventListener('click',up);
+downn.addEventListener('click',down);
+
+function save(){
+location.href = "save.html";
+}
+function dd1(){
+  timee++;
+  crem1 = crem;
+  betm += 1;
+  crem -= 1;
+        $('#ana').clearQueue();
+    $('#ana').stop();
+    $("#ana").animate(
+{opacity:0},{
+  'duration':0
+});
+if(crem < 0){
+    crem = crem1;
+    betm = betm1;
+  }
+  bet.innerHTML = '$'+betm; 
+  creditt.innerHTML = '$'+crem;
+}
+function dd5(){
+  timee++;
+  betm += 5;
+  crem -= 5;
+        $('#ana').clearQueue();
+    $('#ana').stop();
+    $("#ana").animate(
+{opacity:0},{
+  'duration':0
+});
+if(crem < 0){
+    crem = crem1;
+    betm = betm1;
+  }
+  bet.innerHTML = '$'+betm; 
+  creditt.innerHTML = '$'+crem;
+}
+function dd10(){
+  timee++;
+  crem1 = crem;
+  betm += 10;
+  crem -= 10;
+        $('#ana').clearQueue();
+    $('#ana').stop();
+    $("#ana").animate(
+{opacity:0},{
+  'duration':0
+});
+if(crem < 0){
+    crem = crem1;
+    betm = betm1;
+  }
+  bet.innerHTML = '$'+betm; 
+  creditt.innerHTML = '$'+crem;
+}
+function up(){
+  timee++;
+  betmm += 50;
+        $('#ana').clearQueue();
+    $('#ana').stop();
+    $("#ana").animate(
+{opacity:0},{
+  'duration':0
+});
+  if(betmm >= 100){
+    dd.style.fontSize = "40px";
+    dd.style.paddingTop = "1vw";
+    dd.style.height = "7vw";
+  }
+  if(crem < 0){
+    crem = crem1;
+    betm = betm1;
+  }
+dd.innerHTML = '$'+betmm;
+}
+
+function down(){
+  timee++;
+  betmm -= 50;
+        $('#ana').clearQueue();
+    $('#ana').stop();
+    $("#ana").animate(
+{opacity:0},{
+  'duration':0
+});
+  if(betmm < 0){
+    betmm = 0;
+    return;
+  }
+  if(betmm < 100){
+    dd.style.fontSize = "60px";    
+    dd.style.paddingTop = "0px";
+    dd.style.height = "8vw";
+  }
+  dd.innerHTML = '$'+betmm;
+}
+
+function ddd(){
+  timee++;
+        $('#ana').clearQueue();
+    $('#ana').stop();
+  betm1 = parseInt(betm);
+  betmm = parseInt(betmm);
+  crem1 = parseInt(crem); 
+  crem = crem1-betmm;
+  betm = betm1+betmm;  
+  if(crem < 0){
+    crem = crem1;
+    betm = betm1;
+  }
+  bet.innerHTML = '$'+betm;
+  creditt.innerHTML = '$'+crem;
+}
+
+function re(){
+  timee++;
+        $('#ana').clearQueue();
+    $('#ana').stop();
+  crem += betm;
+ betm = 0;
+  bet.innerHTML = '$'+betm;
+  creditt.innerHTML = '$'+crem;
+}
+
+       function imgs(){
+       text = document.getElementById("bet").textContent;
+       if(text == "$0"){
+       document.getElementById("signn").innerHTML = "BETしてください";
+       return;
+       }
+        if(typeof c == 'undefined'){
+          top1 = '45.5vw';
+      top2 = '45.5vw';
+      top3 = '45.5vw';
+      a= 30;
+      document.getElementById("signn").innerHTML = "";
+      document.getElementById("au").load();
+      document.getElementById("au").play();
+          img();
+          img2();
+          img3();
+        }else{
+   top1 = '45.5vw';
+      top2 = '45.5vw';
+      top3 = '45.5vw';
+      a= 30;
+      document.getElementById("signn").innerHTML = "";
+      document.querySelector(c).style.backgroundColor = "";
+            document.getElementById("au").load();
+      document.getElementById("au").play();
+          img();
+          img2();
+          img3();
+  //-181
+  //186
+      }
+    }
+
+      function img(){
+        for(var i = 0; i < a; i++){
+   $('#box').animate({
+    'top':top1
+    },{
+      'duration':time1,
+      'easing':'linear'
+    });
+   $('#box').animate({
+    'top':0
+    },{
+      'duration':0
+    });
+    time1=500;
+
+      }
+    }
+  function img2(){
+          for(var i = 0; i < a; i++){
+    $('#box2').animate({
+        'top':top2
+    },{
+      'duration':time2,
+      'easing':'linear'
+    });
+   $('#box2').animate({
+    'top':0
+    },{
+      'duration':0
+    });
+    time2 = 500;
+          }
+  }
+  function img3(){
+          for(var i = 0; i < a; i++){
+    $('#box3').animate({
+        'top':top3
+    },{
+      'duration':time3,
+      'easing':'linear'
+    });
+   $('#box3').animate({
+    'top':0
+    },{
+      'duration':0
+    });
+    time3 = 500;
+         }
+  }
+  function button2(){
+      $('#box').clearQueue();
+    $('#box').stop();
+    picheck1();
+  }
+  function button3(){
+      $('#box2').clearQueue();
+    $('#box2').stop();
+    picheck2();
+  }
+  function button4(){
+      $('#box3').clearQueue();
+    $('#box3').stop();
+    picheck3();
+  }
+  prizecheck = 0;
+  function picheck1(){
+    prize1 = 0;
+    prizecheck++;
+    //alert(document.getElementById('pic8').getBoundingClientRect().bottom);
+    //|| document.getElementById('pic8').getBoundingClientRect().bottom > 240 && document.getElementById('pic8').getBoundingClientRect().bottom < 320
+   if(document.getElementById('pic8').getBoundingClientRect().top > 160 && document.getElementById('pic8').getBoundingClientRect().top < 240 ){
+    first = 8;
+    $('#box').animate({
+      'top':0
+    },{
+      'duration':1000,
+      'easing':'swing'
+    });
+    time1 = 1000;
+    prize1 = 1;
+
+  }
+  //|| document.getElementById('pic7').getBoundingClientRect().bottom > 240 && document.getElementById('pic7').getBoundingClientRect().bottom < 320
+   else if(document.getElementById('pic7').getBoundingClientRect().top > 160 && document.getElementById('pic7').getBoundingClientRect().top < 240 ){
+    first = 7;
+    $('#box').animate({
+      'top':75
+    },{
+      'duration':1000,
+      'easing':'swing'
+    });
+    time1 = 875;
+    prize1 = 2;
+
+  }
+  else if(document.getElementById('pic6').getBoundingClientRect().top > 160 && document.getElementById('pic6').getBoundingClientRect().top < 240 || document.getElementById('pic6').getBoundingClientRect().bottom > 240 && document.getElementById('pic6').getBoundingClientRect().bottom < 320){
+    first = 6;
+    $('#box').animate({
+      'top':150
+    },{
+      'duration':1000,
+      'easing':'swing'
+    });
+    time1 = 750;
+    prize1 = 3;
+
+  }
+  else if(document.getElementById('pic5').getBoundingClientRect().top > 160 && document.getElementById('pic5').getBoundingClientRect().top < 240 || document.getElementById('pic5').getBoundingClientRect().bottom > 240 && document.getElementById('pic5').getBoundingClientRect().bottom < 320){
+    first = 5;
+    $('#box').animate({
+      'top':225
+    },{
+      'duration':1000,
+      'easing':'swing'
+    });
+    time1 = 625;
+    prize1 = 4;
+
+  }
+  else if(document.getElementById('pic4').getBoundingClientRect().top > 160 && document.getElementById('pic4').getBoundingClientRect().top < 240 || document.getElementById('pic4').getBoundingClientRect().bottom > 240 && document.getElementById('pic4').getBoundingClientRect().bottom < 320){
+    first = 4;
+    $('#box').animate({
+      'top':300
+    },{
+      'duration':1000,
+      'easing':'swing'
+    });
+    time1 = 500;
+    prize1 = 5;
+
+  }
+  else if(document.getElementById('pic3').getBoundingClientRect().top > 160 && document.getElementById('pic3').getBoundingClientRect().top < 240 || document.getElementById('pic3').getBoundingClientRect().bottom > 240 && document.getElementById('pic3').getBoundingClientRect().bottom < 320){
+    first = 3;
+    $('#box').animate({
+      'top':375
+    },{
+      'duration':1000,
+      'easing':'swing'
+    });
+    time1 = 375;
+    prize1 = 6;
+
+  }
+  else if(document.getElementById('pic2').getBoundingClientRect().top > 160 && document.getElementById('pic2').getBoundingClientRect().top < 240 || document.getElementById('pic2').getBoundingClientRect().bottom > 240 && document.getElementById('pic2').getBoundingClientRect().bottom < 320){
+    first = 2;
+    $('#box').animate({
+      'top':450
+    },{
+      'duration':1000,
+      'easing':'swing'
+    });
+    time1 = 0;
+    prize1 = 7;
+  }
+  else if(document.getElementById('pic1').getBoundingClientRect().top > 160 && document.getElementById('pic1').getBoundingClientRect().top < 240 || document.getElementById('pic1').getBoundingClientRect().bottom > 240 && document.getElementById('pic1').getBoundingClientRect().bottom < 320){
+    first = 1;
+    $('#box').animate({
+      'top':525
+    },{
+      'duration':10,
+      'easing':'swing'
+    });
+    time1 = 0;
+    prize1 = 1;
+  }
+  
+  }
+ 
+  function picheck2(){
+   if(typeof prize2 == 'undefined'){
+    prize2 = '';
+   }else{
+   }
+    prizecheck++;
+  if(document.getElementById('pic88').getBoundingClientRect().top > 160 && document.getElementById('pic88').getBoundingClientRect().top < 240 || document.getElementById('pic88').getBoundingClientRect().bottom > 240 && document.getElementById('pic88').getBoundingClientRect().bottom < 320){
+    second = 8;
+    $('#box2').animate({
+      'top':0
+    },{
+      'duration':1000,
+      'easing':'swing'
+    });
+    time2 = 1000;
+    prize2 = 1;
+   }
+   else if(document.getElementById('pic77').getBoundingClientRect().top > 160 && document.getElementById('pic77').getBoundingClientRect().top < 240 || document.getElementById('pic77').getBoundingClientRect().bottom > 240 && document.getElementById('pic77').getBoundingClientRect().bottom < 320){
+    second = 7;
+    $('#box2').animate({
+      'top':75
+    },{
+      'duration':1000,
+      'easing':'swing'
+    });
+    time2 = 875;
+    prize2 = 2;
+
+  }
+  else if(document.getElementById('pic66').getBoundingClientRect().top > 160 && document.getElementById('pic66').getBoundingClientRect().top < 240 || document.getElementById('pic66').getBoundingClientRect().bottom > 240 && document.getElementById('pic66').getBoundingClientRect().bottom < 320){
+    second = 6;
+    $('#box2').animate({
+      'top':150
+    },{
+      'duration':1000,
+      'easing':'swing'
+    });
+    time2 = 750;
+    prize2 = 3;
+  }
+  else if(document.getElementById('pic55').getBoundingClientRect().top > 160 && document.getElementById('pic55').getBoundingClientRect().top < 240 || document.getElementById('pic55').getBoundingClientRect().bottom > 240 && document.getElementById('pic55').getBoundingClientRect().bottom < 320){
+    second = 5;
+    $('#box2').animate({
+      'top':225
+    },{
+      'duration':1000,
+      'easing':'swing'
+    });
+    time2 = 625;
+    prize2 = 4;
+  }
+  else if(document.getElementById('pic44').getBoundingClientRect().top > 160 && document.getElementById('pic44').getBoundingClientRect().top < 240 || document.getElementById('pic44').getBoundingClientRect().bottom > 240 && document.getElementById('pic44').getBoundingClientRect().bottom < 320){
+    second = 4;
+    $('#box2').animate({
+      'top':300
+    },{
+      'duration':1000,
+      'easing':'swing'
+    });
+    time2 = 500;
+    prize2 = 5;
+  }
+  else if(document.getElementById('pic33').getBoundingClientRect().top > 160 && document.getElementById('pic33').getBoundingClientRect().top < 240 || document.getElementById('pic33').getBoundingClientRect().bottom > 240 && document.getElementById('pic33').getBoundingClientRect().bottom < 320){
+    second = 3;
+    $('#box2').animate({
+      'top':375
+    },{
+      'duration':1000,
+      'easing':'swing'
+    });
+    time2 = 375;
+    prize2 = 6;
+  }
+  else if(document.getElementById('pic22').getBoundingClientRect().top > 160 && document.getElementById('pic22').getBoundingClientRect().top < 240 || document.getElementById('pic22').getBoundingClientRect().bottom > 240 && document.getElementById('pic22').getBoundingClientRect().bottom < 320){
+    second = 2;
+    $('#box2').animate({
+      'top':450
+    },{
+      'duration':1000,
+      'easing':'swing'
+    });
+    time2 = 0;
+    prize2 = 7;
+  }
+  else if(document.getElementById('pic11').getBoundingClientRect().top > 160 && document.getElementById('pic11').getBoundingClientRect().top < 240 || document.getElementById('pic11').getBoundingClientRect().bottom > 240 && document.getElementById('pic11').getBoundingClientRect().bottom < 320){
+    second = 1;
+    $('#box2').animate({
+      'top':525
+    },{
+      'duration':1000,
+      'easing':'swing'
+    });
+    time2 = 0;
+    prize2 = 1;
+  }
+
+  }
+  function picheck3(){
+    prize3 = '';
+    prizecheck++;
+  if(document.getElementById('pic888').getBoundingClientRect().top > 160 && document.getElementById('pic888').getBoundingClientRect().top < 240 || document.getElementById('pic888').getBoundingClientRect().bottom > 240 && document.getElementById('pic888').getBoundingClientRect().bottom < 320){
+   third = 8;
+   $('#box3').animate({
+      'top':0
+    },{
+      'duration':1000,
+      'easing':'swing'
+    });
+    time3 = 1000;
+    prize3= 1;
+   }
+   else if(document.getElementById('pic777').getBoundingClientRect().top > 160 && document.getElementById('pic777').getBoundingClientRect().top < 240 || document.getElementById('pic777').getBoundingClientRect().bottom > 240 && document.getElementById('pic777').getBoundingClientRect().bottom < 320){
+    third = 7;
+    $('#box3').animate({
+      'top':75
+    },{
+      'duration':1000,
+      'easing':'swing'
+    });
+    time3 = 875;
+    prize3= 2;
+  }
+  else if(document.getElementById('pic666').getBoundingClientRect().top > 160 && document.getElementById('pic666').getBoundingClientRect().top < 240 || document.getElementById('pic666').getBoundingClientRect().bottom > 240 && document.getElementById('pic666').getBoundingClientRect().bottom < 320){
+   third = 6;
+   $('#box3').animate({
+      'top':150
+    },{
+      'duration':1000,
+      'easing':'swing'
+    });
+    time3 = 750;
+    prize3= 3;
+  }
+  else if(document.getElementById('pic555').getBoundingClientRect().top > 160 && document.getElementById('pic555').getBoundingClientRect().top < 240 || document.getElementById('pic555').getBoundingClientRect().bottom > 240 && document.getElementById('pic555').getBoundingClientRect().bottom < 320){
+    third = 5;
+    $('#box3').animate({
+      'top':225
+    },{
+      'duration':1000,
+      'easing':'swing'
+    });
+    time3 = 625;
+    prize3= 4;
+  }
+  else if(document.getElementById('pic444').getBoundingClientRect().top > 160 && document.getElementById('pic444').getBoundingClientRect().top < 240 || document.getElementById('pic444').getBoundingClientRect().bottom > 240 && document.getElementById('pic444').getBoundingClientRect().bottom < 320){
+    third = 4;
+    $('#box3').animate({
+      'top':300
+    },{
+      'duration':1000,
+      'easing':'swing'
+    });
+    time3 = 500;
+    prize3= 5;
+  }
+  else if(document.getElementById('pic333').getBoundingClientRect().top > 160 && document.getElementById('pic333').getBoundingClientRect().top < 240 || document.getElementById('pic333').getBoundingClientRect().bottom > 240 && document.getElementById('pic333').getBoundingClientRect().bottom < 320){
+    third = 3;
+    $('#box3').animate({
+      'top':375
+    },{
+      'duration':1000,
+      'easing':'swing'
+    });
+    time3 = 375;
+    prize3= 6;
+  }
+  else if(document.getElementById('pic222').getBoundingClientRect().top > 160 && document.getElementById('pic222').getBoundingClientRect().top < 240 || document.getElementById('pic222').getBoundingClientRect().bottom > 240 && document.getElementById('pic222').getBoundingClientRect().bottom < 320){
+    third = 2;
+    $('#box3').animate({
+      'top':450
+    },{
+      'duration':1000,
+      'easing':'swing'
+    });
+    time3 = 0;
+    prize3= 7;
+  }
+  else if(document.getElementById('pic111').getBoundingClientRect().top > 160 && document.getElementById('pic111').getBoundingClientRect().top < 240 || document.getElementById('pic111').getBoundingClientRect().bottom > 240 && document.getElementById('pic111').getBoundingClientRect().bottom < 320){
+    third  = 1;
+    $('#box3').animate({
+      'top':525
+    },{
+      'duration':1000,
+      'easing':'swing'
+    });
+    time3 = 0;
+    prize3= 1;
+  }
+  //alert(third);
+
+  prize();
+  }
+i = 5;
+  function prize(){
+    timee = 0;
+    betm2 = 0;
+    alert
+  if(prizecheck == 3){
+    for( var a = 0; a < i; a++){
+   if(prize1 == prize2 && prize1 == prize3){
+    c = ".k"+prize2;
+    prize2 = String(prize2)-1;
+    betm2 = score[prize2];
+   document.querySelector(c).style.backgroundColor = "red";
+   document.getElementById("signn").innerHTML = "BIGBINGO";
+   }
+   else if(prize1 == prize2){
+    document.getElementById("signn").innerHTML = "BINGO";
+    prize1 = String(prize1);
+    c = ".k"+prize1+prize1;
+    prize1 = String(prize1)-1;
+    betm2 = score2[prize1];
+    document.querySelector(c).style.backgroundColor = "gold";
+            //document.querySelector(c).style.border = "solid";
+   }
+   else if(prize1 == prize3){
+    document.getElementById("signn").innerHTML = "BINGO";
+    prize3 = String(prize3);
+    c = ".k"+prize3+prize3;
+    prize3 = String(prize3)-1;
+    betm2 = score2[prize3];
+    document.querySelector(c).style.backgroundColor = "gold";
+            //document.querySelector(c).style.border = "solid";
+   }
+   else if(prize2 == prize3){
+    document.getElementById("signn").innerHTML = "BINGO";
+    prize3 = String(prize3);
+    c = ".k"+prize3+prize3;
+    prize3 = String(prize3)-1;
+    betm2 = score2[prize3];
+    document.querySelector(c).style.backgroundColor = "gold";
+        //document.querySelector(c).style.border = "solid";
+   }
+    }
+    prizecheck = 0;
+}
+if(betm2 == 0){
+  betm = parseInt(betm);
+  betm = 0;
+  crem2 = parseInt(crem);
+  crem = crem2;
+  bet.innerHTML = '$'+betm;
+  creditt.innerHTML = '$'+crem;
+  setTimeout(hurry,5000);
+  i = 30;
+}else{
+//betm2 = parseInt(betm2)/5;
+betm1 = parseInt(betm)+betm2;
+crem2 = parseInt(crem);
+crem = crem2+betm1;
+betm = 0;
+bet.innerHTML = '$'+betm;
+creditt.innerHTML = '$'+crem;
+betm2 = 0;
+i = 1000;
+setTimeout(hurry,5000);
+  }
+   }
+
+function hurry(){
+  if(timee > 0){
+    return;
+  }else{
+  for(var a = 0; a < i; a++){
+  $("#ana").animate(
+{opacity:0},{
+  'duration':500
+});
+$("#ana").animate(
+{opacity:1},{
+  'duration':500
+});
+c2 =  
+ $(c2).animate(
+{opacity:0},{
+  'duration':500
+});
+$(c2).animate(
+{opacity:1},{
+  'duration':500
+});
+}
+}
+}
+
+
+  function test(){
+    alert(document.getElementById('pic7').getBoundingClientRect().top);
+    alert(document.getElementById('pic7').getBoundingClientRect().bottom);
+  $('#box').animate({
+      'top':-100
+    },{
+      'duration':200,
+      'easing':'linear'
+    });
+  }
+
+  //いつの写真の高さが105//全体の高さは805
+
+  //8のときliの下端部は272,上端部は210 ulの下端部の座標320,上端部は1077
+  //7のときulの下端部の座標は377,上端部は972
+
+  </script>
+  </body>
+  </html>

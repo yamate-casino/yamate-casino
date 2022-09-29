@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>チップデータ</title>
+    </head>
+    <body>
+        <h4>スロットゲームをするにあったって「ユーザー名」・「パスワード」を登録してもらいます。</h4>
+        <h4>以後プレイするときやチップの管理、ランキングの掲載に使用されます</h4>
+        </h1>
+        <p>名前を登録</p>
+     <input type="text" id="username" value="" placeholder="登録するユーザー名を入力">
+     <p>パスワードを登録</p>
+     <input type="password" id="pass1" value="" placeholder="登録するパスワードを入力">
+     <input type="password" id="pass2" value="" placeholder="もう一度パスワードを入力">
+     <div  class="div1"onclick="send()">登録</div>
+     <p class="p2">登録しないでプレーする</p>
+     <div class="div" onclick="go()">スタート</div>
+     <style>
+        body{
+            padding:0;
+            margin:0;
+            Font-family:monospace;
+        }
+h4{
+ Font-size:20px;
+}
+P{
+Font-size:30px;
+Text-align:center;
+Font-weight:600;
+Border-bottom:2px solid;
+}
+.p2{
+Border:none;
+}
+Input{
+Width:300px;
+Height:30px;
+Font-size:20px;
+Border-color:black;
+Border:2px solid;
+}
+.div{
+Margin-left:40vw;
+width:150px;
+background-color:mediumblue;
+color:white;
+font-size:30px;
+font-family:monospace;
+text-align:center;
+border-radius:10px;
+box-shadow: 0 0  5px gray;
+}
+.div1{
+Float:right;
+width:150px;
+Margin-right:20vw;
+background-color:mediumblue;
+color:white;
+font-size:30px;
+font-family:monospace;
+text-align:center;
+border-radius:10px;
+box-shadow: 0 0  5px gray;
+}
+     </style>
+     <script>
+        function send(){
+        username = document.getElementById("username").value;
+        pass1 =  document.getElementById("pass1").value;
+        pass2 =  document.getElementById("pass2").value;
+        Us = username.length;
+        Ps = pass1.length;
+        if(Us == 0 && Ps == 0){
+        alert("記入してください");
+        return;
+        }
+        tip = 30;
+        
+        url="https://script.google.com/macros/s/AKfycbzTWhb59EChVtXXu3VcpsXUUinB76DCHxh_4kRZ1KMM6JYEWGdnH1mIKBsDdwWImd8AWg/exec";
+        if(pass1 == pass2 ){
+         var data = [{
+            'name1':username,
+            'name2':pass1,
+            'name3':tip
+         }];
+         var params = {
+            "method":"post",
+            "mode":"no-cors",
+            "Content-Type":"application/json",
+            "body":JSON.stringify(data)
+         }
+         fetch(url,params)
+         alert("登録完了");
+         go();
+         
+        }else{
+            alert("パスワードが一致しません")
+        }
+        }
+       function go(){
+       location.href = "スロット 2.html";
+       }
+     </script>
+    </body>
+</html>

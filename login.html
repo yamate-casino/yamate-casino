@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ログイン</title>
+</head>
+<body>
+<p>ログイン</p>
+<input type="text" id="username" value="" placeholder="ユーザー名を入力">
+     <p>パスワード</p>
+     <input type="password" id="pass1" value="" placeholder="パスワードを入力">
+<div id="t">
+     <div  class="div1"onclick="send()">ログインしてプレイ</div>
+     <div  class="div1"onclick="play()">ログインせずにプレイ</div>
+　　　</div>
+     <style>
+        body{
+            padding:0;
+            margin:0;
+            Font-family:monospace;
+        }
+h4{
+ Font-size:20px;
+}
+P{
+Font-size:30px;
+Text-align:center;
+Font-weight:600;
+Border-bottom:2px solid;
+}
+.p2{
+Border:none;
+}
+Input{
+Margin-left:35vw;
+Width:300px;
+Height:30px;
+Font-size:20px;
+Border-color:black;
+Border:2px solid;
+}
+.div1{
+Float:right;
+width:300px;
+Margin-right:36vw;
+Margin-top:50px;
+background-color:mediumblue;
+color:white;
+font-size:30px;
+font-family:monospace;
+text-align:center;
+border-radius:10px;
+box-shadow: 0 0  5px gray;
+}
+     </style>
+     <script>
+function play(){
+location.href = "スロット 2.html";
+}
+     function send(){
+if(typeof r !== 'undefined'){
+ r.remove();
+}
+     fetch('https://script.google.com/macros/s/AKfycbzTWhb59EChVtXXu3VcpsXUUinB76DCHxh_4kRZ1KMM6JYEWGdnH1mIKBsDdwWImd8AWg/exec', {
+                  method: "GET",
+                  mode: "cors"
+                })
+                .then(response => {
+                  if (response.ok) {
+                    
+                    return response.json();
+                    
+                  }
+                  // 404 や 500 ステータスならここに到達する
+                  throw new Error('Network response was not ok.')
+               
+                })
+                .then(resJson => {
+resJson = JSON.stringify(resJson);
+                 
+check(resJson);
+              })
+                .catch(error => {
+                  // ネットワークエラーの場合はここに到達する
+                  console.error(error);
+                })
+                }
+function check(resJson){
+text1 = document.getElementById("username").value;
+text2 = document.getElementById("pass1").value;
+last = JSON.parse(resJson).last[0];
+for(var a = 0; a < last; a++){
+name = JSON.parse(resJson).name[a];
+pass = JSON.parse(resJson).pass[a];
+if(name == text1 && pass == text2){
+tip = JSON.parse(resJson).tip[a];
+n = "name="+name;
+p = "pass="+pass;
+t = "tip="+tip;
+document.cookie = n;
+document.cookie = p;
+document.cookie = t;
+alert("good");
+return;
+}else if(name == text1 && pass != text2){
+alert("パスワードが間違っています");
+return;
+}else if(text1 != name && pass == text2){
+alert("ユーザーネームが間違っています")
+return;
+}
+}
+alert("ユーザーを発見できませんでした")
+t.insertAdjacentHTML('afterbegin','<div id="r"class="div1" onclick="make()">ユーザーを作る</div>')
+r = document.getElementById("r");
+}
+function make(){
+location.href="チップデータ.html"
+}
+     </script>
+</body>
+</html>
