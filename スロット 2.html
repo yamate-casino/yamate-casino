@@ -574,7 +574,7 @@ margin-bottom:1vw;
     z-index:200;
     }
     .sign{
-        position:absolute;left: 150px;top:0;
+        position:absolute;left: 150px;top:15px;
         font-size:30px;
         font-weight:700;
         z-index:300;
@@ -1136,6 +1136,7 @@ function re(){
        text = document.getElementById("bet").textContent;
        if(text == "$0"){
        document.getElementById("signn").innerHTML = "BETしてください";
+       document.getElementById("signn").style.fontSize = "20px"
        return;
        }
         if(typeof c == 'undefined'){
