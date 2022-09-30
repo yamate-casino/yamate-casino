@@ -4,13 +4,21 @@
 <meta charset="utf-8">
 <title>save</title>
 </head>
-<body>
+<body onload="start()">
 <h1>プレイしてくれてありがとう！！</h1>
+<img src="aoto.jpg" style="width:100vw;">
 <style>
 Body{
 Font-family:monospace;
 }
-
 </style>
+<script>
+function start(){
+setTimeout(go,5000);
+}
+function go(){
+location.href = "start.html";
+}
+</script>
 </body>
 </html>
