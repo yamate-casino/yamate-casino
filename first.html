@@ -19,8 +19,8 @@
      <div  class="div2"onclick="send()">登録</div>
      <p class="p2">登録しないでプレーする</p>
      <h5>チップをゲーム内のお金に変換</h5>
-      <input type="number" class="tips"id="tips" value=""placeholder="現在持っているチップの数を入力">     <div  class="div1"onclick="ret()">交換する</div>
-      <h4 class="coin"id="coin">ゲーム内のお金：$0</h4>
+      <input type="number" class="tips"id="tips2" value=""placeholder="現在持っているチップの数を入力">     <div  class="div1"onclick="ret2()">交換する</div>
+      <h4 class="coin2"id="coin2">ゲーム内のお金：$0</h4>
      <div class="div" onclick="go()">スタート</div>
      <style>
         body{
@@ -42,14 +42,16 @@ Border-bottom:2px solid;
 }
 .coin{
 font-size:40px;
-
+}
+.coin2{
+font-size:40px;
 }
 .tips{
 border:5px solid red;
 }
 .p2{
 Border-top:5px solid;
-text-align:center;
+text-align:right;
 }
 Input{
 Width:300px;
@@ -96,13 +98,22 @@ box-shadow: 0 0  5px gray;
 }
      </style>
      <script>
+    
      tips = document.getElementById("tips");
+      tips2 = document.getElementById("tips2");
 //tips.addEventListener('keydown',ret);
+
 function ret(){
 tips = tips.value;
 tip = tips*10;
 document.getElementById("coin").innerHTML = "ゲーム内のお金：＄"+tip;
-t = "t="+tip;
+document.cookie = "t=#";
+}
+function ret2(){
+tips2 = tips2.value;
+tip2 = tips2*10;
+document.getElementById("coin2").innerHTML = "ゲーム内のお金：＄"+tip2;
+t = "t="+tip2+"!";
 document.cookie = t;
 
 }
