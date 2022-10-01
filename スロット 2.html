@@ -1122,23 +1122,21 @@ margin-bottom:1vw;
 <script src="jquery.js"></script>
 <script>
       //210
-      time1= 500;
-      time2 = 500;
-      time3 = 500;
+    time1= 5000;
+      time2 = 5000;
+      time3 = 5000;
       timee = 1;
       a = 5;
+      t2 = 0;
       top1 = '-32vw';
       top2 = '22.9vw';
       top3 = '22.9vw';
-      score = [100,50,40,30,20,10,5];
-      score2 = [50,50,40,30,20,10,5,3];
+      score = [100,50,40,30,20,10,5,3];
+      score2 = [100,50,40,30,20,10,5,3];
       prpr = 0;
       b2check = 0;
   b3check = 0;
-  b4check = 0;  
-  guidc = 0; 
-  gui2c =0;
-  gui3c =0; 
+  b4check = 0;   
 bett = document.getElementById("bett");
 credit = document.getElementById("creditt");
 bet = document.getElementById("bet");
@@ -1152,8 +1150,6 @@ downn = document.getElementById("down");
 betm = 0;
 crem = 100;
 betmm = 0;
-numnum = 0;
-url = '';
 d1.addEventListener('click',dd1);
 d5.addEventListener('click',dd5);
 d10.addEventListener('click',dd10);
@@ -1161,25 +1157,34 @@ dd.addEventListener('click',ddd);
 upp.addEventListener('click',up);
 downn.addEventListener('click',down);
 
-
+ttt = '';
 function f(){
 cookie = document.cookie;
 cookiel = cookie.length;
-if(cookiel == 0){
-document.getElementById("credit").innerHTML = "$100";
-skip = '';
-count();
-}else{
+alert(cookie);
+if(cookie.indexOf("t=#")!=-1){
+alert("2");
 n = cookie.indexOf("name=");
 p = cookie.indexOf("; pass=");
-t = cookie.indexOf("; tip=");
+t = cookie.indexOf("tip=");
+tt = cookie.indexOf("!");
 a = cookie.indexOf("; num=");
 n2 = cookie.substring(n+5,a);
 p2 = cookie.substring(p+7,t);
-t2 = cookie.substring(t+6,);
+t2 = cookie.substring(t+4,tt);
 a2 = cookie.substring(a+6,p);
 crem = t2;
 document.getElementById("credit").innerHTML = "$"+t2;
+
+}else{
+alert("1");
+t = cookie.indexOf("t=")+2;
+tt = cookie.indexOf("!");
+t2 = cookie.substring(t,tt);
+crem = t2;
+document.getElementById("credit").innerHTML = "$"+t2;
+skip = '';
+
 }
 }
 
