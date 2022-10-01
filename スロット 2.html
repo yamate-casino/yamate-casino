@@ -1161,9 +1161,7 @@ ttt = '';
 function f(){
 cookie = document.cookie;
 cookiel = cookie.length;
-alert(cookie);
 if(cookie.indexOf("t=#")!=-1){
-alert("2");
 n = cookie.indexOf("name=");
 p = cookie.indexOf("; pass=");
 t = cookie.indexOf("tip=");
@@ -1177,7 +1175,7 @@ crem = t2;
 document.getElementById("credit").innerHTML = "$"+t2;
 
 }else{
-alert("1");
+
 t = cookie.indexOf("t=")+2;
 tt = cookie.indexOf("!");
 t2 = cookie.substring(t,tt);
