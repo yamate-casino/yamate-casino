@@ -114,7 +114,7 @@
 <div id="bett"class="bet">Bet<span class="bets"id ="bet">$0</span></div>
 <div onclick = "re()"class="re">reset</div>
 <div id="ana"class="ana">betしてください</div>
-<div id="creditt"class="credit">Credit<span id = "credit">$0</span></div>
+<div id="creditt"class="credit">Credit<span  class="number1"id = "credit">$0</span></div>
 <div id="d1"class="bet1">$1</div>
 <div id="d5"class="bet2">$5</div>
 <div id="d10"class="bet3">$10</div>
@@ -125,22 +125,22 @@
 <!--あたり-->
 <div class="k"></div>
 <div class="section">
-<div ><img  id="k1"class="k1"src="11.PNG"></div>
-<div ><img  id="k2"class="k2" src="22.PNG"></div>
-<div ><img  id="k3"class="k3" src="333.PNG"></div>
-<div ><img  id="k4"class="k4" src="44.PNG"></div>
-<div ><img  id="k5"class="k5" src="66.PNG"></div>
-<div ><img id="k6" class="k6" src="77.PNG"></div>
-<div ><img  id="k7"class="k7" src="88.PNG"></div>
+<img  class="k1"src="11.PNG"><div   id="k1"class="lp1"></div>
+<img  class="k2" src="22.PNG"><div  id="k2"class="lp2"></div>
+<img  class="k3" src="333.PNG"><div id="k3"class="lp3"></div>
+<img class="k4" src="44.PNG"><div   id="k4"class="lp4"></div>
+<img  class="k5" src="66.PNG"><div id="k5"class="lp5"></div>
+<img class="k6" src="77.PNG"><div id="k6" class="lp6"></div>
+<img  class="k7" src="88.PNG"><div id="k7" class="lp7"></div>
 </div>
 <div class="section2">
-<div><img  id="k11"class="k11" src="111.PNG"></div>
-<div><img  id="k22"class="k22" src="222.PNG"></div>
-  <div ><img  id="k33"class="k33" src="33.PNG"></div>
-  <div ><img  id="k44"class="k44" src="444.PNG"></div>
-  <div ><img  id="k55"class="k55" src="666.PNG"></div>
-  <div ><img  id="k66"class="k66" src="777.PNG"></div>
-  <div ><img  id="k77"class="k77" src="888.PNG"></div>
+  <img class="k11" src="111.PNG"><div  id="k11"class="lp11"></div>
+<img class="k22" src="222.PNG"><div  id="k22"class="lp22"></div>
+  <img class="k33" src="33.PNG"><div  id="k33"class="lp33"></div>
+  <img class="k44" src="444.PNG"><div  id="k44" class="lp44"></div>
+  <img  class="k55" src="666.PNG"><div id="k55"class="lp55"></div>
+  <img  class="k66" src="777.PNG"><div id="k66" class="lp66"></div>
+  <img  class="k77" src="888.PNG"><div id="k77"class="lp77"></div>
   </div>
   <div class="sec2">
     <div class="se11">×100</div>
@@ -172,6 +172,20 @@
      <span>casino</span>
    </pre></div-->
    <div class="save" onclick="save()">やめる</div>
+   <div class="guid" onclick="guids()">操作ガイドをオンにする</div>
+   <!--ガイド-->
+  <!--div class="g111"-->
+   <div class="g1"></div>
+   <div class="g11">枠内の数字が書かれたボタンを押して賭けてみよう</div>
+   <!--/div-->
+   <!--div class="g222"-->
+   <div class="g2"></div>
+   <div class="g22">枠内のボタンを押してスロットを動かそう</div>
+   <!--/div-->
+   <!--div class="g333"-->
+   <div class="g3"></div>
+   <div class="g33">枠内の3つある赤いボタンをそれぞれ押してみよう</div>
+   <!--/div-->
 <script>
     function check(){
         alert(document.getElementById('check').getBoundingClientRect().bottom);
@@ -188,12 +202,177 @@
     li{
         list-style-type: none;
     }
+    .g1{
+      position:absolute;top:-34vw;left:35vw;
+      width:53vw;
+      height:10vw;
+      border:10px solid green;
+      border-radius:10px;
+      z-index:100;
+     display:none;
+    }
+    .g11{
+      position:absolute;top:-23vw;left:40vw;
+      padding:5px;
+      background-color: green;
+      border-radius:10px;
+      font-family:monospace;
+      font-size:30px;
+      color:white;
+      width:40vw;
+      height:10vw;
+      z-index:300;
+     visibility:hidden;
+    }
+
+    .g2{
+      position:absolute;top:-14vw;left:-8.5vw;
+      width:7vw;
+      height:7vw;
+      border:10px solid green;
+      border-radius:10px;
+      z-index:300;
+      display:none;
+    }
+    .g22{
+      position:absolute;top:-6vw;left:-7vw;
+      font-size:30px;
+      font-family:monospace;
+      width:40vw;
+      height:10vw;
+      background-color:green;
+      color:white;
+      border-radius:10px;
+      z-index:300;
+      visibility:hidden;
+    }
+.g3{
+  position:absolute;top:-14vw;left:0vw;
+      width:25vw;
+      height:7vw;
+      border:10px solid green;
+      border-radius:10px;
+      z-index:310;
+      display:none;
+}
+.g33{
+      position:absolute;top:-6vw;left:-7vw;
+      font-size:30px;
+      font-family:monospace;
+      width:40vw;
+      height:10vw;
+      background-color:green;
+      color:white;
+      border-radius:10px;
+      z-index:300;
+      visibility:hidden;
+    }
+    .lp11{
+      position:absolute;top: -3vw;left:1vw;
+      background-color: ;
+      width:280px;
+      height:55px;
+    }
+    .lp22{
+      position:absolute;top: 2.5vw;left:1vw;
+      background-color: ;
+      width:280px;
+      height:55px;
+    }
+    .lp33{
+      position:absolute;top: 8vw;left:1vw;
+      background-color: ;
+      width:280px;
+      height:55px;
+    }
+    .lp44{
+      position:absolute;top: 13.5vw;left:1vw;
+      background-color: ;
+      width:280px;
+      height:55px;
+    }
+    .lp55{
+      position:absolute;top: 19vw;left:1vw;
+      background-color: ;
+      width:280px;
+      height:55px;
+    }
+    .lp66{
+      position:absolute;top: 24.5vw;left:1vw;
+      background-color: ;
+      width:280px;
+      height:55px;
+    }
+    .lp77{
+      position:absolute;top: 30vw;left:1vw;
+      background-color: ;
+      width:280px;
+      height:70px;
+    }
+    .lp1{
+      position:absolute;top: -3vw;left:-4vw;
+      background-color: ;
+      width:280px;
+      height:55px;
+    }
+    .lp2{
+      position:absolute;top: 2.5vw;left:-4vw;
+      background-color: ;
+      width:280px;
+      height:55px;
+    }
+    .lp3{
+      position:absolute;top: 8vw;left:-4vw;
+      background-color: ;
+      width:280px;
+      height:55px;
+    }
+    .lp4{
+      position:absolute;top: 13.5vw;left:-4vw;
+      background-color: ;
+      width:280px;
+      height:55px;
+    }
+    .lp5{
+      position:absolute;top: 19vw;left:-4vw;
+      background-color: ;
+      width:280px;
+      height:55px;
+    }
+    .lp6{
+      position:absolute;top: 24.5vw;left:-4vw;
+      background-color: ;
+      width:280px;
+      height:55px;
+    }
+    .lp7{
+      position:absolute;top: 30vw;left:-4vw;
+      background-color: ;
+      width:280px;
+      height:70px;
+    }
     .save{
-    Position:relative;top:15vw;left:-10vw;
+      width:220px;
+      float:left;
+    Position:relative;top:10vw;left:-10vw;
     Font-size:20px;
     Font-family:monospace;
     Font-weight:600;
     Background-color:red;
+    Padding:10px;
+    Text-align:center;
+    Border-radius:10px;
+    Box-shadow: 0 0 5px gray;
+    }
+    .guid{
+      width:220px;
+      float:right;
+    Position:relative;top:10vw;left:-10vw;
+    Font-size:20px;
+    Font-family:monospace;
+    Font-weight:600;
+    Background-color:green;
+    color:white;
     Padding:10px;
     Text-align:center;
     Border-radius:10px;
@@ -204,108 +383,127 @@
       position: relative;top:-3.5vw;left:-4vw;
       width:15vw;
       height:50px;
+      z-index: 270;
+      background-color: ;
 }
 .k2{
   margin-top:7px;
       position: relative;top:-3.5vw;left:-4vw;
       width:15vw;
       height:50px;
+      z-index: 270;
 }
 .k3{
   margin-top:7px;
       position: relative;top:-3.5vw;left:-4vw;
       width:15vw;
       height:50px;
+      z-index: 270;
 }
 .k4{
   margin-top:7px;
       position: relative;top:-3.5vw;left:-4vw;
       width:15vw;
       height:50px;
+      z-index: 270;
 }
 .k5{
   margin-top:7px;
-      position: relative;top:-3.5vw;left:-4vw;
+      position: relative;top:-2.3vw;left:-4vw;
       width:15vw;
       height:20px;
+      z-index: 270;
 }
 .k6{
   margin-top:7px;
-      position: relative;top:-3.5vw;left:-4vw;
+      position: relative;top:-0.6vw;left:-4vw;
       width:15vw;
-      height:50px;
+      height:40px;
+      z-index: 270;
 }
 .k7{
   margin-top:7px;
-      position: relative;top:-3.5vw;left:-4vw;
+      position: relative;top:0vw;left:-4vw;
       width:15vw;
       height:60px;
+      z-index: 270;
 }
 .k11{
   margin-top:7px;
       position: relative;top:-3.5vw;left:-4vw;
       width:15vw;
       height:50px;
+      z-index: 270;
+      background-color: ;
 }
 .k22{
   margin-top:7px;
       position: relative;top:-3.5vw;left:-4vw;
       width:15vw;
       height:50px;
+      z-index: 270;
 }
 .k33{
   margin-top:7px;
       position: relative;top:-3.5vw;left:-4vw;
       width:15vw;
       height:50px;
+      z-index: 270;
 }
 .k44{
   margin-top:7px;
       position: relative;top:-3.5vw;left:-4vw;
       width:15vw;
       height:50px;
+      z-index: 270;
 }
 .k55{
   margin-top:7px;
-      position: relative;top:-3.5vw;left:-4vw;
+      position: relative;top:-2.5vw;left:-4vw;
       width:15vw;
       height:20px;
+      z-index: 270;
 }
 .k66{
   margin-top:7px;
-      position: relative;top:-3.5vw;left:-4vw;
+      position: relative;top:-1vw;left:-4vw;
       width:15vw;
       height:50px;
+      z-index: 270;
 }
 .k77{
   margin-top:7px;
-      position: relative;top:-3.5vw;left:-4vw;
+      position: relative;top:-1vw;left:-4vw;
       width:15vw;
       height:60px;
+      z-index: 270;
 }
 .se1{
-  position: relative;top:-13vw;left:90vw;
+  position: relative;top:-13.5vw;left:65vw;
 margin-bottom:2vw;
   font-size:40px;
   font-weight:600;
+  background-color:;
+  text-align:right;
+  width:30vw;
   z-index:210;
 }
 .se2{
-  position: relative;top:-13vw;left:90vw;
+  position: relative;top:-14vw;left:90vw;
 margin-bottom:1vw;
   font-size:40px;
   font-weight:600;
   z-index:210;
 }
 .se3{
-  position: relative;top:-13vw;left:90vw;
+  position: relative;top:-13.5vw;left:90vw;
 margin-bottom:1vw;
   font-size:40px;
   font-weight:600;
   z-index:210;
 }
 .se4{
-  position: relative;top:-13vw;left:90vw;
+  position: relative;top:-13.5vw;left:90vw;
 margin-bottom:0.2vw;
   font-size:40px;
   font-weight:600;
@@ -319,42 +517,42 @@ margin-bottom:0vw;
   z-index:210;
 }
 .se6{
-  position: relative;top:-12.5vw;left:90vw;
+  position: relative;top:-11.5vw;left:90vw;
 margin-bottom:1.6vw;
   font-size:40px;
   font-weight:600;
   z-index:210;
 }
 .se7{
-  position: relative;top:-12.5vw;left:90vw;
+  position: relative;top:-11vw;left:90vw;
 margin-bottom:1vw;
   font-size:40px;
   font-weight:600;
   z-index:210;
 }
 .se11{
-  position: relative;top:24vw;left:62vw;
+  position: relative;top:23vw;left:62vw;
 margin-bottom:2vw;
   font-size:40px;
   font-weight:600;
   z-index:210;
 }
 .se22{
-  position: relative;top:24vw;left:62vw;
+  position: relative;top:22vw;left:62vw;
 margin-bottom:1vw;
   font-size:40px;
   font-weight:600;
   z-index:210;
 }
 .se33{
-  position: relative;top:24vw;left:62vw;
+  position: relative;top:22.5vw;left:62vw;
 margin-bottom:1vw;
   font-size:40px;
   font-weight:600;
   z-index:210;
 }
 .se44{
-  position: relative;top:24vw;left:62vw;
+  position: relative;top:22.5vw;left:62vw;
 margin-bottom:0.2vw;
   font-size:40px;
   font-weight:600;
@@ -368,14 +566,14 @@ margin-bottom:0vw;
   z-index:210;
 }
 .se66{
-  position: relative;top:24vw;left:62vw;
+  position: relative;top:25vw;left:62vw;
 margin-bottom:1.6vw;
   font-size:40px;
   font-weight:600;
   z-index:210;
 }
 .se77{
-  position: relative;top:24vw;left:62vw;
+  position: relative;top:25.5vw;left:62vw;
 margin-bottom:1vw;
   font-size:40px;
   font-weight:600;
@@ -385,7 +583,7 @@ margin-bottom:1vw;
       width:200px;
       height:200px;
       background-color: ;
-      position: absolute;left:50vw;top: 30vw;
+      position: absolute;left:50vw;top: 29vw;
       z-index:210;
       padding:0;
       margin: 0;
@@ -397,10 +595,9 @@ margin-bottom:1vw;
       width:200px;
       height:10vw;
       background-color: ;
-      position: absolute;left: 72vw;top: 30.2vw;
+      position: absolute;left: 72vw;top: 29vw;
       z-index:210;
     }
-   
 
     .up{
      position:absolute;left:94vw;top:15vw;
@@ -925,20 +1122,23 @@ margin-bottom:1vw;
 <script src="jquery.js"></script>
 <script>
       //210
-      time1= 500;
-      time2 = 500;
-      time3 = 500;
+      time1= 5000;
+      time2 = 5000;
+      time3 = 5000;
       timee = 1;
       a = 5;
       top1 = '-32vw';
       top2 = '22.9vw';
       top3 = '22.9vw';
-      score = [300,200,100,50,25,15,10];
-      score2 = [50,40,30,20,10,5,3];
+      score = [100,50,40,30,20,10,5];
+      score2 = [50,50,40,30,20,10,5,3];
       prpr = 0;
       b2check = 0;
   b3check = 0;
-  b4check = 0;   
+  b4check = 0;  
+  guidc = 0; 
+  gui2c =0;
+  gui3c =0; 
 bett = document.getElementById("bett");
 credit = document.getElementById("creditt");
 bet = document.getElementById("bet");
@@ -952,6 +1152,8 @@ downn = document.getElementById("down");
 betm = 0;
 crem = 100;
 betmm = 0;
+numnum = 0;
+url = '';
 d1.addEventListener('click',dd1);
 d5.addEventListener('click',dd5);
 d10.addEventListener('click',dd10);
@@ -966,6 +1168,7 @@ cookiel = cookie.length;
 if(cookiel == 0){
 document.getElementById("credit").innerHTML = "$100";
 skip = '';
+count();
 }else{
 n = cookie.indexOf("name=");
 p = cookie.indexOf("; pass=");
@@ -1015,6 +1218,8 @@ function dd1(){
   crem1 = crem;
   betm += 1;
   crem -= 1;
+
+  guid3();
         $('#ana').clearQueue();
     $('#ana').stop();
     $("#ana").animate(
@@ -1032,6 +1237,8 @@ function dd5(){
   timee++;
   betm += 5;
   crem -= 5;
+
+  guid3();
         $('#ana').clearQueue();
     $('#ana').stop();
     $("#ana").animate(
@@ -1050,8 +1257,11 @@ function dd10(){
   crem1 = crem;
   betm += 10;
   crem -= 10;
+
+  guid3();
         $('#ana').clearQueue();
     $('#ana').stop();
+
     $("#ana").animate(
 {opacity:0},{
   'duration':0
@@ -1109,6 +1319,8 @@ function ddd(){
   timee++;
         $('#ana').clearQueue();
     $('#ana').stop();
+
+    guid3();
   betm1 = parseInt(betm);
   betmm = parseInt(betmm);
   crem1 = parseInt(crem); 
@@ -1126,7 +1338,6 @@ function re(){
   timee++;
         $('#ana').clearQueue();
     $('#ana').stop();
-    
     crem = parseInt(crem);
     betm = parseInt(betm);
   crem += betm;
@@ -1135,7 +1346,9 @@ function re(){
   creditt.innerHTML = '$'+crem;
 }
 
+
        function imgs(){
+        guid3();
        text = document.getElementById("bet").textContent;
        if(text == "$0"){
        document.getElementById("signn").innerHTML = "BETしてください";
@@ -1553,10 +1766,12 @@ function re(){
   prize();
   }
 i = 5;
+c2 = '';
 function prize(){
  if(prpr == 3){
     timee = 0;
     betm2 = 0;
+    guid3();
     for( var a = 0; a < i; a++){
    if(prize1 == prize2 && prize1 == prize3){
   prr();
@@ -1565,11 +1780,13 @@ function prize(){
    else if(prize1 == prize2){
     document.getElementById("signn").innerHTML = "BINGO";
     prize1 = String(prize1);
-    c = ".k"+prize1+prize1;
-    prize1 = String(prize1)-1;
+    c2 = prize1+prize1;
+    c = ".lp"+prize1+prize1;
+    prize1 = String(prize1);
     betm2 = score2[prize1];
     document.querySelector(c).style.backgroundColor = "gold";
             //document.querySelector(c).style.border = "solid";
+            aniani();
                 prpr=0;
                puls();
                return;
@@ -1577,11 +1794,13 @@ function prize(){
    else if(prize1 == prize3){
     document.getElementById("signn").innerHTML = "BINGO";
     prize3 = String(prize3);
-    c = ".k"+prize3+prize3;
-    prize3 = String(prize3)-1;
+    c2 = prize3+prize3;
+    c = ".lp"+prize3+prize3;
+    prize3 = String(prize3);
     betm2 = score2[prize3];
     document.querySelector(c).style.backgroundColor = "gold";
             //document.querySelector(c).style.border = "solid";
+            aniani();
                 prpr=0;
                puls();
                return;
@@ -1589,11 +1808,13 @@ function prize(){
    else if(prize2 == prize3){
     document.getElementById("signn").innerHTML = "BINGO";
     prize3 = String(prize3);
-    c = ".k"+prize3+prize3;
-    prize3 = String(prize3)-1;
+    c2 = prize3+prize3;
+    c = ".lp"+prize3+prize3;
+    prize3 = String(prize3);
     betm2 = score2[prize3];
     document.querySelector(c).style.backgroundColor = "gold";
         //document.querySelector(c).style.border = "solid";
+        aniani();
             prpr=0;
            puls();
            return;
@@ -1620,8 +1841,8 @@ if(betm2 == 0){
   crem2 = parseInt(crem);
   crem = crem2;
   bet.innerHTML = '$'+betm;
-  creditt.innerHTML = '$'+crem;
-
+  numnum = crem;
+count();
     i = 1000;
     send();
   setTimeout(hurry,5000);
@@ -1633,7 +1854,8 @@ crem2 = parseInt(crem);
 crem = crem2+betm1;
 betm = 0;
 bet.innerHTML = '$'+betm;
-creditt.innerHTML = '$'+crem;
+numnum = crem;
+count();
 betm2 = 0;
 i = 1000;
     send();
@@ -1644,7 +1866,7 @@ function send(){
 dataa = String(prize1)+String(prize2)+String(prize3);
 cremm = crem+"/"+dataa;
 if(typeof skip == 'undefined'){
-  url="https://script.google.com/macros/s/AKfycbzTWhb59EChVtXXu3VcpsXUUinB76DCHxh_4kRZ1KMM6JYEWGdnH1mIKBsDdwWImd8AWg/exec";
+  url ="https://script.google.com/macros/s/AKfycbzTWhb59EChVtXXu3VcpsXUUinB76DCHxh_4kRZ1KMM6JYEWGdnH1mIKBsDdwWImd8AWg/exec";
          var data = [{
          'name3':cremm,
             'name4':a2,
@@ -1710,19 +1932,233 @@ timee = 0;
       'easing':'linear'
     });
   }
+
+
 function prr(){
-    c = ".k"+prize1;
-   
-    prize1 = String(prize1);
+  c2 = prize1;
+    c = ".lp"+prize1;
+    prize1 = String(prize1-1);
     betm2 = score[prize1];
-    
-   
     betm2 = betm*betm2;
-    
     document.querySelector(c).style.backgroundColor = "gold";
+    aniani();
               prpr=0;
            puls();
 }
+
+
+function aniani(){
+c2 = "#k"+ c2;
+i = 100;
+for(var a = 0; a < i; a++){
+  $(c2).animate(
+{opacity:0},{
+  'duration':500
+});
+$(c2).animate(
+{opacity:1},{
+  'duration':500
+});
+ $(c2).animate(
+{opacity:0},{
+  'duration':500
+});
+$(c2).animate(
+{opacity:1},{
+  'duration':500
+});
+}
+}
+function count(){
+const shuffleNumberCounter = (target) => {
+  const targetNum = numnum;
+  if (!targetNum) {
+    return
+  }
+  let counterData = null
+  const speed = 800 / targetNum
+  let initNum = 0
+  const countUp = () => {
+    if (Number.isInteger(targetNum)) {
+      target.innerHTML = "$"+initNum
+    } else {
+      target.innerHTML = "$"+`${initNum}.${Math.floor(Math.random() * 9)}`
+    }
+    initNum++
+    if (initNum > targetNum) {
+      target.innerHTML = "$"+targetNum
+      clearInterval(counterData)
+    }
+  }
+  counterData = setInterval(countUp, speed)
+}
+const target = document.querySelector('.number1');
+shuffleNumberCounter(target)
+}
+guic = 0;
+guidcc = 0;
+
+function guids(){
+  guidcc++;
+if(guidcc == 1 ){
+  guic =0;
+  gui2c = 0;
+  gui3c = 0;
+  guid();
+}else{
+return;
+}
+}
+function guid(){
+guic++;
+  i = 1;
+if(guic == 1){
+  document.querySelector(".g1").style.display = "block";
+  document.querySelector(".g1").style.opacity = "1";  
+  document.querySelector(".g11").style.visibility = "visible";
+  document.querySelector(".g11").style.opacity = "1";
+  for(var a = 0; a < i; a++){
+  $(".g1").animate(
+{opacity:0},{
+  'duration':500
+});
+$(".g1").animate(
+{opacity:1},{
+  'duration':1000
+});
+ $(".g1").animate(
+{opacity:0},{
+  'duration':500
+});
+$(".g1").animate(
+{opacity:1},{
+  'duration':1000
+});
+$(".g1").animate(
+{opacity:0},{
+  'duration':500
+});
+}
+setTimeout(guid2,3500);
+  /*
+  document.querySelector(".g11").style.visibility = "hidden";
+  document.querySelector(".g11").style.opacity = "0";*/
+}else if(guic == 2){
+  document.querySelector(".g2").style.display = "block";
+  document.querySelector(".g2").style.opacity = "1";  
+  document.querySelector(".g22").style.visibility = "visible";
+  document.querySelector(".g22").style.opacity = "1";
+  specailnumber = 0;
+  for(var a = 0; a < i; a++){
+  $(".g2").animate(
+{opacity:0},{
+  'duration':500
+});
+$(".g2").animate(
+{opacity:1},{
+  'duration':1000
+});
+ $(".g2").animate(
+{opacity:0},{
+  'duration':500
+});
+$(".g2").animate(
+{opacity:1},{
+  'duration':1000
+});
+$(".g2").animate(
+{opacity:0},{
+  'duration':500
+});
+}
+setTimeout(guid2,3500);
+}else if(guic == 3){
+  document.querySelector(".g3").style.display = "block";
+  document.querySelector(".g3").style.opacity = "1";  
+  document.querySelector(".g33").style.visibility = "visible";
+  document.querySelector(".g33").style.opacity = "1";
+  specailnumber = 0;
+  for(var a = 0; a < i; a++){
+  $(".g3").animate(
+{opacity:0},{
+  'duration':500
+});
+$(".g3").animate(
+{opacity:1},{
+  'duration':1000
+});
+ $(".g3").animate(
+{opacity:0},{
+  'duration':500
+});
+$(".g3").animate(
+{opacity:1},{
+  'duration':1000
+});
+$(".g3").animate(
+{opacity:0},{
+  'duration':500
+});
+}
+setTimeout(guid2,3500);
+
+}
+}
+
+function guid2(){
+gui2c++;
+if(gui2c == 1){
+  document.querySelector(".g1").style.display = "none";
+  document.querySelector(".g1").style.opacity = "0";
+}else if(gui2c == 2){
+  document.querySelector(".g2").style.display = "none";
+  document.querySelector(".g2").style.opacity = "0";
+}else if(gui2c == 3){
+  document.querySelector(".g3").style.display = "none";
+  document.querySelector(".g3").style.opacity = "0";
+  
+}
+}
+specailnumber = 0;
+time = '';
+
+function guid3(){
+  if(specailnumber == 1){
+    clearTimeout(time);
+    time = setTimeout(guid,2000);
+    return;
+  }else{
+  if(guidcc > 0 ){
+    if(gui3c == 0){
+  document.querySelector(".g11").style.visibility = "hidden";
+  document.querySelector(".g11").style.opacity = "0";
+  gui3c = 1;
+  specailnumber = 1;
+time = setTimeout(guid,2000);
+}else if(gui3c == 1){
+  document.querySelector(".g22").style.visibility = "hidden";
+  document.querySelector(".g22").style.opacity = "0";
+  gui3c++;
+  setTimeout(guid,500);
+}else if(gui3c = 2){
+  document.querySelector(".g33").style.visibility = "hidden";
+  document.querySelector(".g33").style.opacity = "0";
+  gui3c++;
+  guidcc= 0;
+  specailnumber = 0;
+}
+  }else{
+return;
+  }
+}
+document.querySelector(".g33").style.visibility = "hidden";
+  document.querySelector(".g33").style.opacity = "0";
+
+}
+/*  document.querySelector(".g222").style.visibility = "visible";
+document.querySelector(".g222").style.opacity = "1";
+    document.querySelector(".g333").style.visibility = "visible";
+  document.querySelector(".g333").style.opacity = "1";*/
   //いつの写真の高さが105//全体の高さは805
 
   //8のときliの下端部は272,上端部は210 ulの下端部の座標320,上端部は1077
