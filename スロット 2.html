@@ -1559,13 +1559,7 @@ function prize(){
     betm2 = 0;
     for( var a = 0; a < i; a++){
    if(prize1 == prize2 && prize1 == prize3){
-    c = ".k"+prize2;
-    prize2 = String(prize2)-1;
-    betm2 = score[prize2];
-   document.querySelector(c).style.backgroundColor = "gold";
-   document.getElementById("signn").innerHTML = "BIGBINGO";
-       prpr=0;
-   puls();
+  prr();
    return;
    }
    else if(prize1 == prize2){
@@ -1716,7 +1710,19 @@ timee = 0;
       'easing':'linear'
     });
   }
-
+function prr(){
+    c = ".k"+prize1;
+    alert(prize1);
+    prize1 = String(prize1);
+    betm2 = score[prize1];
+    alert(betm2);
+    alert(betm);
+    betm2 = betm*betm2;
+    alert(betm2);
+    document.querySelector(c).style.backgroundColor = "gold";
+              prpr=0;
+           puls();
+}
   //いつの写真の高さが105//全体の高さは805
 
   //8のときliの下端部は272,上端部は210 ulの下端部の座標320,上端部は1077
