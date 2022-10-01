@@ -97,14 +97,14 @@ tip = JSON.parse(resJson).tip[a];
 a = a+2;
 n = "name="+name;
 p = "pass="+pass;
-t = "tip="+tip;
+t = "tip="+tip+"!";
 a = "num="+a;
 document.cookie = n;
 document.cookie = p;
 document.cookie = t;
 document.cookie = a;
-     alert("ログインしました");
-     location.href="スロット 2.html";
+document.cookie = "t=#";
+location.href="スロット 2.html";
 return;
 }else if(name == text1 && pass != text2){
 alert("パスワードが間違っています");
