@@ -13,8 +13,14 @@
      <p>パスワードを登録</p>
      <input type="password" id="pass1" value="" placeholder="登録するパスワードを入力">
      <input type="password" id="pass2" value="" placeholder="もう一度パスワードを入力">
-     <div  class="div1"onclick="send()">登録</div>
+     <h5>チップをゲーム内のお金に変換</h5>
+      <input type="number" class="tips"id="tips" value=""placeholder="現在持っているチップの数を入力">     <div  class="div1"onclick="ret()">交換する</div>
+      <h4 class="coin"id="coin">ゲーム内のお金：$0</h4>
+     <div  class="div2"onclick="send()">登録</div>
      <p class="p2">登録しないでプレーする</p>
+     <h5>チップをゲーム内のお金に変換</h5>
+      <input type="number" class="tips"id="tips" value=""placeholder="現在持っているチップの数を入力">     <div  class="div1"onclick="ret()">交換する</div>
+      <h4 class="coin"id="coin">ゲーム内のお金：$0</h4>
      <div class="div" onclick="go()">スタート</div>
      <style>
         body{
@@ -25,14 +31,25 @@
 h4{
  Font-size:20px;
 }
+h5{
+font-size:20px;
+}
 P{
 Font-size:30px;
 Text-align:center;
 Font-weight:600;
 Border-bottom:2px solid;
 }
+.coin{
+font-size:40px;
+
+}
+.tips{
+border:5px solid red;
+}
 .p2{
-Border:none;
+Border-top:5px solid;
+text-align:center;
 }
 Input{
 Width:300px;
@@ -64,8 +81,31 @@ text-align:center;
 border-radius:10px;
 box-shadow: 0 0  5px gray;
 }
+.div2{
+position:relative;top:-5vw;
+Float:right;
+width:150px;
+Margin-right:20vw;
+background-color:mediumblue;
+color:white;
+font-size:30px;
+font-family:monospace;
+text-align:center;
+border-radius:10px;
+box-shadow: 0 0  5px gray;
+}
      </style>
      <script>
+     tips = document.getElementById("tips");
+//tips.addEventListener('keydown',ret);
+function ret(){
+tips = tips.value;
+tip = tips*10;
+document.getElementById("coin").innerHTML = "ゲーム内のお金：＄"+tip;
+t = "t="+tip;
+document.cookie = t;
+
+}
         function send(){
         username = document.getElementById("username").value;
         pass1 =  document.getElementById("pass1").value;
@@ -115,16 +155,13 @@ document.getElementById("pass2").value = "";
 return;
 }
 }
-
-        tip = 100;
-        
         url="https://script.google.com/macros/s/AKfycbzTWhb59EChVtXXu3VcpsXUUinB76DCHxh_4kRZ1KMM6JYEWGdnH1mIKBsDdwWImd8AWg/exec";
         if(pass1 == pass2 ){
          var data = [{
             'name1':username,
             'name2':pass1,
             'name3':tip,
-             'name5':'e'
+            'name5':'e'
          }];
          var params = {
             "method":"post",
@@ -134,7 +171,7 @@ return;
          }
          fetch(url,params)
          alert("登録完了");
-         location.href = "login.html"
+               location.href = "login.html";
         }else{
             alert("パスワードが一致しません")
         }
