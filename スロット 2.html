@@ -1173,7 +1173,17 @@ t2 = cookie.substring(t+4,tt);
 a2 = cookie.substring(a+6,p);
 crem = t2;
 document.getElementById("credit").innerHTML = "$"+t2;
-
+url="https://script.google.com/macros/s/AKfycbyfvR6V4rdw6P04v7FABVnhpsTFCOQvtT_RgPVBw2hme3B6Cm7fFRWP88L3QoH6DdwbYQ/exec";
+         var data = [{
+            'name2':"a"
+         }];
+         var params = {
+            "method":"post",
+            "mode":"no-cors",
+            "Content-Type":"application/json",
+            "body":JSON.stringify(data)
+       }
+         fetch(url,params)
 }else{
 
 t = cookie.indexOf("t=")+2;
@@ -1182,7 +1192,17 @@ t2 = cookie.substring(t,tt);
 crem = t2;
 document.getElementById("credit").innerHTML = "$"+t2;
 skip = '';
-
+url="https://script.google.com/macros/s/AKfycbyfvR6V4rdw6P04v7FABVnhpsTFCOQvtT_RgPVBw2hme3B6Cm7fFRWP88L3QoH6DdwbYQ/exec";
+         var data = [{
+            'name2':"a"
+         }];
+         var params = {
+            "method":"post",
+            "mode":"no-cors",
+            "Content-Type":"application/json",
+            "body":JSON.stringify(data)
+       }
+         fetch(url,params)
 }
 }
 
