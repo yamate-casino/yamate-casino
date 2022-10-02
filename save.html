@@ -6,15 +6,26 @@
 </head>
 <body onload="start()">
 <h1>プレイしてくれてありがとう！！</h1>
+<p id="p">12345</p>
+<h5>小数点以下切り捨て</h5>
 <img src="aoto.jpg" style="width:100vw;">
 <style>
 Body{
 Font-family:monospace;
 }
+p{
+font-size:40px;
+font-weight:600;
+}
 </style>
 <script>
 function start(){
-setTimeout(go,5000);
+message = document.cookie;
+m1 = message.indexOf("crem=")+5;
+m2 = message.indexOf("@");
+m = message.substring(m1,m2)/10;
+document.getElementById("p").innerHTML = "金額:$"+m;
+//setTimeout(go,5000);
 }
 function go(){
 location.href = "start.html";
