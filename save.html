@@ -9,7 +9,8 @@
 <p id="p">12345</p>
 <h5>小数点以下切り捨て</h5>
 <img src="aoto.jpg" style="width:100vw;">
-<style>
+  <button onclick="next()">next</buttoon>
+          <style>
 Body{
 Font-family:monospace;
 }
@@ -27,7 +28,8 @@ m = message.substring(m1,m2)/10;
 document.getElementById("p").innerHTML = "金額:$"+m;
 //setTimeout(go,5000);
 }
-function go(){
+  
+function next(){
 location.href = "start.html";
 }
 </script>
