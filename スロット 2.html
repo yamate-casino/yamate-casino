@@ -1205,6 +1205,9 @@ url="https://script.google.com/macros/s/AKfycbzTWhb59EChVtXXu3VcpsXUUinB76DCHxh_
          fetch(url,params)
  var r = confirm("プレイをやめる");
  if(r == true){
+     
+ message = "crem="+crem+"@";
+ document.cookie = message;
  location.href = "save.html";
  }else{
  return;
