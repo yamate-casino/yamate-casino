@@ -102,22 +102,34 @@ box-shadow: 0 0  5px gray;
      tips = document.getElementById("tips");
       tips2 = document.getElementById("tips2");
 //tips.addEventListener('keydown',ret);
-
+po1 = 0;
+po2 = 0;
 function ret(){
+po1++;
+if(po1 == 1 ){
 tips = tips.value;
-tip = tips*5;
+tip = tips*10;
 document.getElementById("coin").innerHTML = "ゲーム内のお金：＄"+tip;
 document.cookie = "t=#";
+}else{
+return;
+}
 }
 function ret2(){
+po2++;
+if(po2 == 1){
 tips2 = tips2.value;
-tip2 = tips2*5;
+tip2 = tips2*10;
 document.getElementById("coin2").innerHTML = "ゲーム内のお金：＄"+tip2;
 t = "t="+tip2+"!";
 document.cookie = t;
-
+}else{
+return;
+}
 }
         function send(){
+        po1 = 0;
+        po2 = 0;
         username = document.getElementById("username").value;
         pass1 =  document.getElementById("pass1").value;
         pass2 =  document.getElementById("pass2").value;
