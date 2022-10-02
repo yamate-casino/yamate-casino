@@ -5,14 +5,14 @@
 <title>スロット</title>
 <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 </head>
-<body>
+<body onload="al()">
 <img src="slot.jpg"class="img">
 <h1>YAMATE&nbsp&nbspCASINO&nbsp&nbsp&nbsp&nbsp&nbspSLOTGAME</h1>
-<div class="scr2"><img src="scr.png" class="scr"></div>
 <img src="a.JPG" class="a">
 <img src="b.JPG" class="a">
 <img src="c.jpeg" class="a">
 <img src="d.JPG" class="a">
+<img src="e.JPG" class="a">
 <div class="s1">
 <p class="p"><img src="S.PNG" style="width:40px;">初めてプレイする人</p>
 <div onclick="go()" class="go">LET'S START</div>
@@ -27,13 +27,7 @@ body{
 .img{
 width:100vw;
 }
-.scr{
-    width:20vw;
-}
-.scr2{
-    position: absolute;top:50vw;left:80vw;
-    z-index:100;
-}
+
 h1{
 position:absolute;top:25vw;
 font-size:70px;
@@ -86,12 +80,15 @@ background-color:;
 }
 
 </style>
-<script>
-    function go(){
- location.href="first.html";
-    }
-    function go2(){
-        location.href="login.html";
+  <script>
+function go(){
+location.href ="first2.html";
+}
+function go2(){
+location.href = "login.html";
+}
+    function al(){
+    //alert("今バグがあるのでうまく点数が加算されないことがあります")
     }
 </script>
 </body>
